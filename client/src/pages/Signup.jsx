@@ -17,7 +17,7 @@ const Signup = () => {
     setLoading(true);
 
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/register", { name, email, password });
+      const res = await axios.post("https://expense-management-system-using-mern.onrender.com/api/auth/register", { name, email, password });
 
       alert("Signup successful! Redirecting to login...");
       navigate("/login");
