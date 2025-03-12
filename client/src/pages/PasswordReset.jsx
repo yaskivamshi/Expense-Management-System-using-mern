@@ -17,7 +17,7 @@ const PasswordReset = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/forgot-password", { email });
+      const res = await axios.post("https://expense-management-system-using-mern.onrender.com/api/auth/forgot-password", { email });
       setMessage(res.data.msg || "Check your email for the password reset link.");
       setError("");
     } catch (err) {
@@ -32,7 +32,7 @@ const PasswordReset = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/reset-password", {
+      const res = await axios.post("https://expense-management-system-using-mern.onrender.com/api/auth/reset-password", {
         token,
         newPassword,
       });
