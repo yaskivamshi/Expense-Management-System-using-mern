@@ -48,6 +48,11 @@ app.use(cors());
 app.use("/api/auth", require("./routes/authRoutes"));
 app.use("/api/expenses", require("./routes/expenseRoutes"));
 
+
+app.use(cors({
+  origin: 'https://expense-management-system-using-mern-1.onrender.com',
+  credentials: true
+}));
 // MongoDB Connection
 mongoose
   .connect(process.env.MONGO_URI)
